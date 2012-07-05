@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="partigene, EST, EACBASE">
+        <title>Cluster Search - EnchyBASE</title>
+        <link rel="stylesheet" href="assets/style/reset.css" />
+        <link type="text/css" href="assets/style/Aristo/jquery-ui-1.8.7.custom.css" rel="stylesheet" />
+        <script src="assets/script/jquery.min.js"></script>
+        <script src="assets/script/jquery-ui.min.js"></script>   
+        <link rel="stylesheet" href="assets/style/parti.css" />
+        <script>
+            $(document).ready(function(){
+                $("#submit,#reset,#go,#search").button();
+            });
+        </script>
+    </head>
+    <body>
+        <form method="post" action="cluster.php">
+            <h1>Cluster Search</h1>
+            <p>
+                Species 
+                <select name="species">
+                    <option value="ea">Enchytraeus albidus</option>
+                </select>
+                Cluster ID 
+                <input type="text" name="term" />
+                <input type="submit" id="go" value="Go" /></p>
+            <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                <br />
+                <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
+                    Enter an EnchyBASE cluster ID (e.g. <em>EAC00003</em>)</p>
+                <br />
+            </div>
+        </form>
+        <br />
+        <br />
+        <form method="post" action="acc.php">
+            <h1>Sequence Search</h1>
+            <p>
+                Species 
+                <select name="species">
+                    <option value="ea">Enchytraeus albidus</option>
+                </select>
+                GenBank Accession Number <input type="text" name="term"> Library 
+                <select name="library">
+                    <option value="all">All</option>
+                    <option value="normal">Normalized</option>
+                    <option value="metals">Metals</option>
+                    <option value="pesticides">Pesticides</option>
+                </select>
+                <input type="submit" id="go" value="Go"></p>
+            <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                <br />
+                <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
+                    Enter a GenBank Accession Number (e.g. <em>GT066529</em>)</p>
+                <br />
+            </div>
+        </form>
+        <br />
+        <br />
+        <form method="post" action="annotation.php">
+            <h1>BLAST Annotation Search</h1>
+            <p>
+                Species 
+                <select name="species">
+                    <option value="ea">Enchytraeus albidus</option>
+                </select>
+                Annotation
+                <input type="text" name="term">
+                Library 
+                <select name="library">
+                    <option value="all">All</option>
+                    <option value="normal">Normalized</option>
+                    <option value="metals">Metals</option>
+                    <option value="pesticides">Pesticides</option>
+                </select>
+                <input type="submit" id="go" value="Go"></p>
+            <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                <br />
+                <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
+                    Enter an annotation term (e.g. <em>actin</em>)</p>
+                <br />
+            </div>
+        </form>
+        <br />
+        <br />
+        <form method="post" action="ontology.php">
+            <h1>Gene Ontology Search</h1>
+            <p>
+                Species 
+                <select name="species">
+                    <option value="ea">Enchytraeus albidus</option>
+                </select>
+                GO term
+                <input type="text" name="term">
+                Library 
+                <select name="library">
+                    <option value="all">All</option>
+                    <option value="normal">Normalized</option>
+                    <option value="metals">Metals</option>
+                    <option value="pesticides">Pesticides</option>
+                </select>
+                <input type="submit" id="go" value="Go"></p>
+            <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                <br />
+                <p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
+                    Enter a GO accession (e.g. <em>GO:0005524</em>) or term (e.g. <em>ATP binding</em>)</p>
+                <br />
+            </div>
+        </form>
+        <br />
+        <br />
+        <form method="post" action="primers.php">
+            <h1>Primer Search</h1>
+            <p>
+                Species 
+                <select name="species">
+                    <option value="ea">Enchytraeus albidus</option>
+                </select>
+                GenBank Accession Number
+                <input type="text" name="term"><input type="submit" id="search" value="Search"></p>
+
+            <div class="ui-state-highlight ui-corner-all" style="margin-top: 20px; padding: 0 .7em;">
+                <br /><p><span class="ui-icon ui-icon-info" style="float: left; margin-right: .7em;"></span>
+                    Enter the desired GenBank Accession Number  (e.g. <em>GT066529</em>)</p><br />
+            </div>
+        </form>
+    </body>
+</html>
